@@ -1,5 +1,7 @@
 require 'bundler/setup'
 require 'rspec/core/rake_task'
+require 'rubocop/rake_task'
+
 require File.join('.', 'config', 'deployment_config.rb')
 require File.join('.', 'config', 'app_config.rb')
 require File.join('.', 'lib', 'version.rb')
@@ -46,4 +48,6 @@ task :routes do
   end
 end
 
-task default: 'spec:unit'
+RuboCop::RakeTask.new
+
+task default: [:rubocop, :'spec:unit']

@@ -1,0 +1,6 @@
+language: ruby
+
+# internally hosted on gem; not need for running linter + tests
+before_install: sed -i s/"gem 'libre_metrics_client'.*"// Gemfile
+
+install: bundle install --jobs=3 --retry=3
