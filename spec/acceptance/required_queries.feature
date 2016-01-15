@@ -4,7 +4,7 @@ Feature: Must-not-break search scenarios
     Given there are the following valid environments:
       | Environment | Hostname              | Path                                |
       | development | localhost:3000        | OpenSearchDescription               |
-      | integration | integration.nsidc.org | api/dataset/2/OpenSearchDescription |
+      | integration | qa.nsidc.org          | api/dataset/2/OpenSearchDescription |
       | qa          | qa.nsidc.org          | api/dataset/2/OpenSearchDescription |
       | staging     | staging.nsidc.org     | api/dataset/2/OpenSearchDescription |
       | production  | nsidc.org             | api/dataset/2/OpenSearchDescription |
